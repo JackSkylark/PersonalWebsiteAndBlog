@@ -2,8 +2,8 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "JohnSlaughter.Data.BlogContentService": "1.0.0-*",
     "JohnSlaughter.Data.BlogData": "1.0.0-*",
+    "JohnSlaughter.Data.FileStorage": "1.0.0-*",
     "Microsoft.AspNetCore.Mvc.Core": "1.1.0",
     "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.0"
   },

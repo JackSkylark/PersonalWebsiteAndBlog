@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "Microsoft.NETCore.App": {
-      "version": "1.0.1",
+      "version": "1.1.0",
       "type": "platform"
     },
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
@@ -14,9 +14,9 @@
     "Microsoft.AspNetCore.Mvc.Core": "1.1.0",
     "SapientGuardian.EntityFrameworkCore.MySql": "7.1.19",
     "JohnSlaughter.Api.StaticContentApi": "1.0.0-*",
-    "JohnSlaughter.Data.BlogData": "1.0.0-*",
     "Microsoft.Extensions.Logging.Debug": "1.1.0",
-    "JohnSlaughter.Data.BlogContentService": "1.0.0-*"
+    "JohnSlaughter.Data.BlogContentService": "1.0.0-*",
+    "JohnSlaughter.Data.FileStorage": "1.0.0-*"
   },
 
   "tools": {

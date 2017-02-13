@@ -6,8 +6,8 @@
     "System.IO.FileSystem": "4.3.0",
     "Markdig": "0.10.4",
     "Microsoft.NETCore.App": {
-      "type": "platform",
-      "version": "1.1.0"
+      "version": "1.1.0",
+      "type": "platform"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
     "Microsoft.Extensions.Configuration.Abstractions": "1.1.0",

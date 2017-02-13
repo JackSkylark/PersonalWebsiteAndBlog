@@ -10,10 +10,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using JohnSlaughter.Api.StaticContentApi;
-using JohnSlaughter.Data.BlogData;
+//using JohnSlaughter.Data.BlogData;
 using Microsoft.EntityFrameworkCore;
 using MySQL.Data.Entity.Extensions;
 using JohnSlaughter.Data.BlogContentService;
+using JohnSlaughter.Data.FileStorage;
+using JohnSlaughter.Api.StaticContentApi.Model;
 
 namespace JohnSlaughter.App.ApiServer
 {
@@ -36,13 +38,16 @@ namespace JohnSlaughter.App.ApiServer
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            // Db Contexts
-            services.AddBlogData(options => options.UseMySQL(
-                _configuration.GetConnectionString("BlogDb")));
+            services.AddMarkdownFileStorage(new StoragePathOptions() {
+                RootDirectory = @"G:\Development\Blog",
+                SubFolderName = @"\Posts"
+            });
 
-
-            services.AddBlogContentService(
-                _configuration.GetSection("BlogContent"));
+            services.AddYamlFileStorage<PostMeta>(new StoragePathOptions()
+            {
+                RootDirectory = @"G:\Development\Blog",
+                SubFolderName = @"\Posts"
+            });
 
             // MVC & API Controllers.
             services.AddMvc(SetupMvc)
