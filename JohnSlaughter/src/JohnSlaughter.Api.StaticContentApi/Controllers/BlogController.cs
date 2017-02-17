@@ -64,7 +64,7 @@ namespace JohnSlaughter.Api.StaticContentApi.Controllers
                 return NotFound(key);
             }
 
-            return Ok(post[key]);
+            return Content(post[key], "text/html");
         }
 
         //[Route("posts")]
